@@ -1,0 +1,170 @@
+@font-face {
+  font-family: hankenGrotesk;
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+  --primary-light-red: hsl(0, 100%, 67%);
+  --primary-orangey-yellow: hsl(39, 100%, 56%);
+  --primary-green-teal: hsl(166, 100%, 37%);
+  --primary-cobalt-blue: hsl(234, 85%, 45%);
+
+  --gradient-light-slate-blue: hsl(252, 100%, 67%);
+  --gradient-light-royal-blue: hsl(241, 81%, 54%);
+  --gradient-violet-blue: hsla(256, 72%, 46%, 1);
+  --gradient-persian-blue: hsla(241, 72%, 46%, 0);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-pale-blue: hsl(221, 100%, 96%);
+  --neutral-light-lavender: hsl(241, 100%, 89%);
+  --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+  --light-weight: 500;
+  --regular-weight: 700;
+  --strong-weight: 800;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+body {
+  font-family: hankenGrotesk;
+}
+
+section.result {
+  background-image: linear-gradient(
+    var(--gradient-light-slate-blue),
+    var(--gradient-light-royal-blue)
+  );
+  color: white;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 0 0 40px 40px;
+  margin-bottom: 2rem;
+}
+
+section.result > h1 {
+  font-size: 18px;
+  color: var(--neutral-light-lavender);
+}
+
+section.result > .circle_rate {
+  background-image: linear-gradient(
+    var(--gradient-violet-blue),
+    var(--gradient-persian-blue)
+  );
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 100%;
+  margin: 2rem auto;
+}
+
+section.result > .circle_rate > h2 {
+  color: var(--neutral-white);
+  font-size: 4rem;
+}
+
+section.result > .circle_rate > h3 {
+  font-size: 1rem;
+  color: var(--neutral-light-lavender);
+  opacity: 0.7;
+}
+
+section.result > p {
+  margin-top: 1rem;
+  padding: 0 2rem;
+  opacity: 0.6;
+}
+
+section.summary {
+  padding: 0 40px;
+}
+
+section.summary > h2 {
+  margin-bottom: 1rem;
+}
+
+section.summary > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgray;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+section.summary > ul > li > .title,
+section.summary > ul > li > .rate {
+  display: flex;
+  gap: 0.7rem;
+}
+
+section.summary > ul > .reaction {
+  background-color: rgba(255, 0, 0, 0.17);
+}
+
+section.summary > ul > .memory {
+  background-color: rgba(255, 166, 0, 0.143);
+}
+
+section.summary > ul > .verbal {
+  background-color: rgba(0, 128, 0, 0.103);
+}
+
+section.summary > ul > .visual {
+  background-color: rgba(0, 0, 255, 0.153);
+}
+
+section.summary > ul > .reaction > .title > h3 {
+  color: var(--primary-light-red);
+}
+
+section.summary > ul > .memory > .title > h3 {
+  color: var(--primary-orangey-yellow);
+}
+
+section.summary > ul > .verbal > .title > h3 {
+  color: var(--primary-green-teal);
+}
+
+section.summary > ul > .visual > .title > h3 {
+  color: var(--primary-cobalt-blue);
+}
+
+section.summary > ul > li > .rate > p {
+  font-weight: var(--strong-weight);
+}
+
+section.summary > ul > li > .rate > p:last-of-type {
+  color: gray;
+}
+
+section.summary button {
+  margin-top: 1rem;
+  background-color: var(--neutral-dark-gray-blue);
+  width: 100%;
+  color: var(--neutral-white);
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 400px;
+  font-weight: var(--strong-weight);
+  transition: 0.4s;
+  margin-bottom: 2rem;
+}
+
+section.summary button:hover {
+  background-color: black;
+}
